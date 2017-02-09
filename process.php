@@ -47,8 +47,8 @@ $replace = array(
 
 $subject = $_POST['text'];
 $subject = strtoupper($subject);
-$transform = nl2br( str_replace($search, $replace, $subject ) );
-echo json_encode( array('transform' => $transform) );
+$transform = str_replace($search, $replace, $subject );
+echo $transform;
 
 /*A = 4
 B = 13

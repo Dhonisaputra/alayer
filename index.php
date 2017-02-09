@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
 	<title>Alayer Converter</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -62,8 +62,9 @@
 			var action = $('form').attr('action');
 			$.post(action, {text: data})
 			.done(function(res){
-				res = JSON.parse(res);
-				$('.convert').html(res.transform)
+				// res = JSON.parse(res);
+					$('.convert').text(res)
+				// $('.convert').html(res.transform)
 			})
 		}
 
@@ -88,8 +89,9 @@
 				var action = $(this).attr('action');
 				$.post(action, data)
 				.done(function(res){
-					res = JSON.parse(res);
-					$('.convert').html(res.transform)
+					console.log(res)
+					// res = JSON.parse(res);
+					$('.convert').text(res)
 				})
 			})
 
